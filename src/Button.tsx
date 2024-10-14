@@ -1,10 +1,11 @@
 import React from 'react';
 
 type PropsType = {
-  title: string
+    title: string
+    onClick?: () => void
 }
 export const Button = (props: PropsType) => {
-  return (
-      <button>{props.title}</button>
-  )
+    return (
+        <button onClick={props.onClick}>{props.title}</button>
+    )
 }

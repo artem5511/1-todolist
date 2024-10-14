@@ -1,12 +1,16 @@
 import React from 'react';
 import {Button} from './Button';
+import {FiltervaluesType} from './App';
 
-export const ButtonsBlock = () => {
+type ButtonBlockPropsType = {
+    buttononClickHandler:  (filter: FiltervaluesType) => void
+}
+export const ButtonsBlock = (props: ButtonBlockPropsType) => {
     return (
         <>
-            <Button title="All"/>
-            <Button title="Completed"/>
-            <Button title="Active"/>
+            <Button title="All" onClick={() => props.buttononClickHandler('all')}/>
+            <Button title="Completed" onClick={() => props.buttononClickHandler('active')}/>
+            <Button title="Active" onClick={() => props.buttononClickHandler('completed')}/>
         </>
     )
 }
