@@ -19,7 +19,9 @@ export const List = (props: ListPropsType) => {
                                onChange={e => props.changeTaskStatus(task.id, e.currentTarget.checked)}
                         />
                         <span className={task.isDone ? 'task-done' : 'task'}>{task.title}</span>
-                        <Button title={'x'} onClick={() => {
+                        <Button
+                            title={'x'}
+                            onClick={() => {
                             props.removeTask(task.id)
                         }}/>
                     </li>

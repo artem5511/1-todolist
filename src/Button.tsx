@@ -9,6 +9,7 @@ type PropsType = {
 export const Button = (props: PropsType) => {
     return (
         <button
+            disabled={props.disabled}
             className={props.classes}
             onClick={props.onClick}
 
