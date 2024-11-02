@@ -15,15 +15,15 @@ export const List = (props: ListPropsType) => {
                 return (
                     <li>
                         <input type="checkbox"
-                               checked={task.isDone}
-                               onChange={e => props.changeTaskStatus(task.id, e.currentTarget.checked)}
+                            checked={task.isDone}
+                            onChange={e => props.changeTaskStatus(task.id, e.currentTarget.checked)}
                         />
                         <span className={task.isDone ? 'task-done' : 'task'}>{task.title}</span>
                         <Button
                             title={'x'}
                             onClick={() => {
-                            props.removeTask(task.id)
-                        }}/>
+                                props.removeTask(task.id)
+                            }}/>
                     </li>
                 )
             })
